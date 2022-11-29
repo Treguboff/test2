@@ -17,6 +17,7 @@ async function get_Data(url) {
     headers: {
       'Authorization': "Basic " + btoa((unescape(encodeURIComponent('Integration:Qazxcv135')))),
       'Content-Type': 'application/json',
+      'Access-Control-Allow-Credentials': true,
     }
   });
   const data = await response.json();
