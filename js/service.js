@@ -11,6 +11,7 @@ async function get_Data(url) {
   }
 
   const response = await fetch(url, {
+    credentials: "include",
     method: 'GET',
     headers: {
       'Authorization': "Basic " + btoa((unescape(encodeURIComponent('Integration:Qazxcv135')))),
