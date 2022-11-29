@@ -1,0 +1,81 @@
+.main {
+  display: grid;
+  /* последняя строка 1 fr для отступа от footer*/
+  grid-template-rows: 0.5fr 6fr 0.5fr; 
+  grid-template-columns: 100%;  
+}
+
+.name_client {
+  text-align: center;
+}
+
+.grid-container-info {
+  /*расположение внутри блока кнопок*/
+  display: grid;
+  gap: 20px;
+  grid-template-rows: 1fr 1fr 1fr 5fr;
+}
+
+/* основной счет */
+.account {
+  display: grid;
+  gap: 20px;
+  grid-template: 1fr / 1fr 0.5fr 0.5fr;  
+}
+/* бонусный счет */
+.bonus {
+  display: grid;
+  gap: 20px;
+  grid-template: 1fr / 1fr 0.5fr 0.5fr;
+}
+/* инфо */
+.info {
+  display: grid;
+  gap: 20px;
+  grid-template: 1fr / 1fr 0.5fr 0.5fr;
+}
+/* блок из 2 кнопок */
+.group_2_button {
+  display: grid;
+  gap: 20px;
+  grid-template: 1fr / 1fr 1fr;
+}
+
+/* описание строки внутри блока */
+.title {
+  width: 100%;
+  margin: auto;
+}
+
+._name {
+  display: flex;
+  text-align: center;
+}
+
+._sum {
+  text-align: center;
+  display: flex;
+}
+
+._btn {
+  justify-self: center;
+  align-self: center;
+}
+
+.bdr {
+  border-style: double;
+  border-color: #ebebeb;
+  border-width: 2px;
+  border-radius: 30px;
+}
+
+/* позиционирование 2 кнопок из отдельного блока */
+.service {
+  justify-self: center;
+  align-self: center;
+}
+
+.schedule {
+  justify-self: center;
+  align-self: center;
+}

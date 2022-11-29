@@ -1,0 +1,17 @@
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 6fr;
+}
+
+.main_text {
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+}
+
+.main_card {
+  justify-self: center;
+  align-self: center;
+}

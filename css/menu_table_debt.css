@@ -1,0 +1,20 @@
+/* таблица */
+  
+table {
+    margin: 0px 10px;
+  }
+  table,
+  th,
+  td {
+    border: 1px solid black;
+  }
+  th,
+  td {
+    padding: 3px;
+  }
+  tfoot {
+    color: red;
+  }
+  tfoot td:first-child {
+    text-align: right;
+  }

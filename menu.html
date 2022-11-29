@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="css/basic_style.css">
+  <link rel="stylesheet" href="css/menu_style.css">
+
+  <link rel="stylesheet" href="css/menu_modal_window.css">
+  <link rel="stylesheet" href="css/menu_table_debt.css">
+  <link rel="stylesheet" href="css/menu_calc.css">
+
+  <title>TERFIT</title>
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="header_logo">
+        <img class="pic" src="img/terfit.svg" alt="logo">
+      </div>
+
+      <div class="header_logout">
+        <a href="index.html"><button class="bn9"><span>Выход</span></button></a>
+      </div>
+    </header>
+    
+    <main class="main">
+      <div class="name_client">
+        <h1>Трегубов Виталий Николаевич</h1>
+      </div>
+
+      <div class="grid-container-info">
+
+        <div class="account bdr">
+          <div class="_name">
+            <div class="title">
+              <h2>Основной счет</h2>
+            </div>
+          </div>
+
+          <div class="_sum">
+            <div class="title">
+              <h2>1500</h2>
+            </div>
+          </div>
+
+          <div class="_btn">
+            <a href="#iw-modal"><button class="bn9"><span>Пополнить</span></button></a>
+          </div>
+
+        </div>
+
+        <div class="bonus bdr">
+          <div class="_name">
+            <div class="title">
+              <h2>Бонусный счет</h2>
+            </div>
+          </div>
+          <div class="_sum">
+            <div class="title">
+              <h2>50</h2>
+            </div>
+          </div>
+          <div class="_btn_hide"></div>
+        </div>
+
+        <div class="info bdr">
+          <div class="_name">
+            <div class="title">
+              <h2>Информация о задолженности</h2>
+            </div>
+          </div>
+          <div class="_sum">
+            <div class="title">
+              <h2>4580</h2>
+            </div>
+          </div>
+          <div class="_btn">
+            <a href="#iw-modal2"><button class="bn9"><span>Оплатить</span></button></a>
+          </div>
+        </div>
+
+
+
+        <div class="group_2_button bdr">
+          <div class="service">
+            <a href="service.html"><button class="bn9"><span>Каталог услуг</span></button></a>
+          </div>
+          <div class="schedule">
+            <a href="schedule.html"><button class="bn9"><span>Расписание</span></button></a>
+          </div>
+        </div>
+
+      </div>
+
+      <!---Разметка для модального окна---->
+      <div id="iw-modal" class="iw-modal">
+        <div class="iw-modal-wrapper">
+          <div class="iw-CSS-modal-inner">
+            <div class="iw-modal-header">
+              <h3 class="iw-modal-title">Основной счет</h3>
+              <a href="#close" title="Закрыть" class="iw-close">×</a>
+            </div>
+            <div class="iw-modal-text">
+              <p>Введите сумму для пополнения счета</p>
+
+              <div class="calculator">
+
+                <input type="text" class="calc-numbers" value="0">
+
+                <div class="calculator-buttons">
+                  <button class="btn is-clear span-2 orange operator">C</button>
+                  <button class="btn orange operator">&larr;</button>
+                  <button class="btn orange operator">&divide;</button>
+                  <button class="btn">7</button>
+                  <button class="btn">8</button>
+                  <button class="btn">9</button>
+                  <button class="btn orange operator">x</button>
+                  <button class="btn">4</button>
+                  <button class="btn">5</button>
+                  <button class="btn">6</button>
+                  <button class="btn orange">-</button>
+                  <button class="btn">1</button>
+                  <button class="btn">2</button>
+                  <button class="btn">3</button>
+                  <button class="btn orange operator">+</button>
+                  <button class="btn span-3">0</button>
+                  <button class="btn orange operator">=</button>
+
+                </div>
+
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="iw-modal2" class="iw-modal">
+        <div class="iw-modal-wrapper">
+          <div class="iw-CSS-modal-inner">
+            <div class="iw-modal-header">
+              <h3 class="iw-modal-title">Информация о задолженности</h3>
+              <a href="#close" title="Закрыть" class="iw-close">×</a>
+            </div>
+            <div class="iw-modal-text">
+              <table id="table1">
+                <thead>
+                  <tr>
+                    <th>Оплатить</th>
+                    <th>Наименование</th>
+                    <th>Количество</th>
+                    <th>Сумма</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <input type="checkbox" name="bay" checked="checked" onclick="getChecked()" value="120" />
+                    </td>
+                    <td>Кофе</td>
+                    <td>1</td>
+                    <td>120</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <input type="checkbox" name="bay" checked="checked" onclick="getChecked()" value="60.5" />
+                    </td>
+                    <td>Донат</td>
+                    <td>2</td>
+                    <td>60.5</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="3">Total sum</td>
+                    <td id="myTotal1">555</td>
+                  </tr>
+                </tfoot>
+              </table>
+              <a href="#" class="button_bay">Оплатить</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!---end.Разметка для модального окна---->
+    </main>
+
+    <footer class="footer">
+      <div class="footer_text">
+        <h2>@Treguboff 2022</h2>
+      </div>
+      <div class="footer_logo">
+        <img class="pic" src="img/terfit_footer.svg" alt="footer_logo">
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/menu_table_debt.js"></script>
+  <script src="js/menu_calc.js"></script>
+
+</body>
+
+</html>
