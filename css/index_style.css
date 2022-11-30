@@ -12,6 +12,7 @@
 }
 
 .main_card {
+  max-width: 35%;
   justify-self: center;
   align-self: center;
 }

@@ -212,7 +212,7 @@ async function get(container, url) {
       const h2 = document.createElement('h2');
       h2.textContent = el.Группа;
   
-      const p = document.createElement('p');
+      const p = document.createElement('h2');
       p.textContent = el.Код;
   
       menu_parent = el.РодительКод;
