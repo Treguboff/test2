@@ -145,6 +145,8 @@ let my_test_data = [
 const content_ = document.querySelector('.content');
 content_.innerHTML = "";
 
+let menu_parent = 'false';
+
 /* функция загрузки API */
 async function get_Data(url) {
 
@@ -178,6 +180,7 @@ async function get(container, url) {
 		content_.innerHTML = "";
 
 		const start = qtyPerPage * page;
+
 		const end = start + qtyPerPage;
 		const paginatedData = arrData.slice(start, end);
 
@@ -192,19 +195,17 @@ async function get(container, url) {
 				var codeCard = card.childNodes[2].textContent;//code
 
 				if (isFolder == "true") {
-
-					card.style.backgroundColor = 'green'; /* ??? сделать фон папки */
-
 					//удалим старую структуру и перестроим ее
 					container.innerHTML = "";
 
 					const pag = document.querySelector('.pagination');
+
 					pag.innerHTML = "";
 
 					get(container, "http://localhost/Test_DB/hs/term/v1/menu?parent_code=" + codeCard);
 				} else {
 					//выбор конечного элемента
-					window.location.href = 'menu.html';
+					window.location.href = 'index.html';
 				}
 
 			}
@@ -234,14 +235,46 @@ async function get(container, url) {
 	function displayPagination(arrData, qtyPerPage) {
 		const paginationEl = document.querySelector('.pagination');
 		const pagesCount = Math.ceil(arrData.length / qtyPerPage);
+
+		const b1 = document.createElement("button");
+		b1.setAttribute('class', 'c-button');
+		b1.onclick = function () {
+
+			container.innerHTML = "";
+			paginationEl.innerHTML = "";
+
+			if (menu_parent=="false"){
+				get(container,"http://localhost/Test_DB/hs/term/v1/menu");
+			} else {
+				get(container,"http://localhost/Test_DB/hs/term/v1/menu?parent_code=" + menu_parent);
+			}			
+		};
+
+		const text_b1 = document.createElement("h2");
+		text_b1.textContent = 'Назад';
+		b1.appendChild(text_b1);
+		paginationEl.appendChild(b1);
+
 		const ulEl = document.createElement("ul");
 		ulEl.classList.add('pagination__list');
-
 		for (let i = 0; i < pagesCount; i++) {
+
 			const liEl = displayPaginationBtn(i + 1);
 			ulEl.appendChild(liEl)
+
 		}
-		paginationEl.appendChild(ulEl)
+		paginationEl.appendChild(ulEl);
+
+		const b2 = document.createElement("button");
+		b2.setAttribute('class', 'c-button');
+		b2.onclick = function () {
+			window.location.href = 'menu.html';
+		};
+
+		const text_b2 = document.createElement("h2");
+		text_b2.textContent = 'В меню';
+		b2.appendChild(text_b2);
+		paginationEl.appendChild(b2);
 	}
 
 	function displayPaginationBtn(page) {

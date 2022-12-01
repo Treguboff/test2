@@ -1,8 +1,7 @@
 .main {
-  height: 100vh - 150px;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 50px auto 50px;
+  grid-template-rows: 50px auto 100px;
 }
 
 .text {
@@ -11,7 +10,6 @@
 }
 
 .content {
-  height: 100vh - 250px;
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
   gap: 10px;
@@ -31,10 +29,10 @@
 }
 
 .pagination {
-
-  height: 50px;
-  display: flex;
-  justify-content: center;
+  height: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100%;
 }
 
 .gallery__img {
@@ -44,6 +42,9 @@
 }
 
 .pagination__list {
+  justify-self: center;
+  align-self: center;
+  
   display: flex;
   list-style-type: none;
 }
