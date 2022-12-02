@@ -35,7 +35,7 @@ function random_color(){
 function create_ul_event(){
 	
 	//var arr = get("http://localhost/Test_DB/hs/api_terfit/v3/classes/?start_date=2022-10-13 06:00&end_date=2022-10-13 23:59&service_id=&employee_id=&club_id=f2509711-6397-11e5-8ff2-00155d019d02");
-	arr = test.data;
+	arr = schedule_data.data;
 
 	const arrayUniqueByKey_room = [...new Map(arr.map(item => [item.room.id, item])).values()];
 	

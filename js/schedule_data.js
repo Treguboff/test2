@@ -1,4 +1,4 @@
-window['test'] = {
+window['schedule_data'] = {
 	"result": true,
 	"data": [
 		{

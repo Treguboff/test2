@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="css/basic_style.css" />
+
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600" rel="stylesheet">
+	
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style3.css"> <!-- Resource style -->
+
+	<title>TERFIT</title>
+</head>
+
+<body>
+	<div class="wrapper">
+
+		<header class="header">
+			<div class="header_logo"><img class="pic" src="img/terfit.svg" alt="logo"></div>
+			<div></div>
+			<div></div>
+			<button class="c-button c-button--sm" onclick="document.location='index.html'">
+				<h2>Выход</h2>
+			</button>
+		</header>
+
+		<main class="main">
+			<div class="cd-schedule loading">
+				<div class="timeline">
+					<ul>
+						<li><span>06:00</span></li>
+						<li><span>06:30</span></li>
+						<li><span>07:00</span></li>
+						<li><span>07:30</span></li>
+						<li><span>08:00</span></li>
+						<li><span>08:30</span></li>
+						<li><span>09:00</span></li>
+						<li><span>09:30</span></li>
+						<li><span>10:00</span></li>
+						<li><span>10:30</span></li>
+						<li><span>11:00</span></li>
+						<li><span>11:30</span></li>
+						<li><span>12:00</span></li>
+
+
+
+
+					</ul>
+				</div> <!-- .timeline -->
+
+				<div class="events">
+					<ul>
+						<li class="events-group">
+							<div class="top-info"><span>Зал №1</span></div>
+
+							<ul>
+								<li class="single-event" data-start="06:00" data-end="06:30"
+									data-content="event-abs-circuit" data-event="event-1">
+									<a href="#0">
+										<em class="event-name">Abs Circuit</em>
+									</a>
+								</li>
+
+								<li class="single-event" data-start="11:00" data-end="12:30"
+									data-content="event-rowing-workout" data-event="event-2">
+									<a href="#0">
+										<em class="event-name">Rowing Workout</em>
+									</a>
+								</li>
+
+							</ul>
+						</li>
+
+						<li class="events-group">
+							<div class="top-info"><span>Зал №2</span></div>
+
+							<ul>
+								<li class="single-event" data-start="10:00" data-end="11:00"
+									data-content="event-rowing-workout" data-event="event-2">
+									<a href="#0">
+										<em class="event-name">Rowing Workout</em>
+									</a>
+								</li>
+
+								<li class="single-event" data-start="11:30" data-end="13:00"
+									data-content="event-restorative-yoga" data-event="event-4">
+									<a href="#0">
+										<em class="event-name">Restorative Yoga</em>
+									</a>
+								</li>
+
+							</ul>
+						</li>
+
+						<li class="events-group">
+							<div class="top-info"><span>Зал №3</span></div>
+
+							<ul>
+								<li class="single-event" data-start="09:00" data-end="10:15"
+									data-content="event-restorative-yoga" data-event="event-4">
+									<a href="#0">
+										<em class="event-name">Restorative Yoga</em>
+									</a>
+								</li>
+
+								<li class="single-event" data-start="10:45" data-end="11:45" data-content="event-yoga-1"
+									data-event="event-3">
+									<a href="#0">
+										<em class="event-name">Yoga Level 1</em>
+									</a>
+								</li>
+
+							</ul>
+						</li>
+
+						<li class="events-group">
+							<div class="top-info"><span>Зал №4</span></div>
+
+							<ul>
+								<li class="single-event" data-start="09:30" data-end="10:30"
+									data-content="event-abs-circuit" data-event="event-1">
+									<a href="#0">
+										<em class="event-name">Abs Circuit</em>
+									</a>
+								</li>
+
+							</ul>
+						</li>
+
+						<li class="events-group">
+							<div class="top-info"><span>Зал №5</span></div>
+
+							<ul>
+								<li class="single-event" data-start="10:00" data-end="11:00"
+									data-content="event-rowing-workout" data-event="event-2">
+									<a href="#0">
+										<em class="event-name">Rowing Workout</em>
+									</a>
+								</li>
+
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+				<div class="event-modal">
+					<header class="header">
+						<div class="content">
+							<span class="event-date"></span>
+							<h3 class="event-name"></h3>
+						</div>
+
+						<div class="header-bg"></div>
+					</header>
+
+					<div class="body">
+						<div class="event-info"></div>
+						<div class="body-bg"></div>
+					</div>
+
+					<a href="#0" class="close">Close</a>
+				</div>
+
+				<div class="cover-layer"></div>
+			</div> <!-- .cd-schedule -->
+		</main>
+
+		<footer class="footer">
+			<div class="footer_text">
+				<h2>Tregubov</h2>
+			</div>
+			<div class="footer_logo">
+				<img class="pic" src="img/terfit_footer.svg" alt="footer_logo">
+			</div>
+		</footer>
+	</div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<script src="js/main.js"></script> <!-- Resource jQuery -->
+
+</body>
+
+</html>

@@ -36,11 +36,13 @@ body {
 .header {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 100px;
 }
 
 .header_logo {
   justify-self: left;
   align-self: center;
+  max-height: 100px;
 }
 
 .header_logout {
@@ -53,17 +55,20 @@ body {
 .footer {
   display: grid;
   grid-template-columns: 50% 50%;
+  grid-template-rows: 50px;
 }
 
 .footer_text {
   justify-self: left;
   align-self: center;
+  max-height: 50px;
 }
 
 .footer_logo {
   max-width: 50%;
   justify-self: right;
   align-self: center;
+  max-height: 100px;
 }
 
 .pic {
@@ -75,11 +80,13 @@ body {
 h1 {
   font-size: 2vw;
   line-height: 1;
+  color: white;
 }
 
 h2 {
   font-size: 1vw;
   line-height: 1;
+  color: white;
 }
 
 
